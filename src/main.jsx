@@ -13,6 +13,7 @@ import Contact from "./Contace/Contact";
 import Login from "./Login/Login";
 import Register from "./Register/Register";
 import PrivateRoute from "./PrivateRoute/PrivateRoute";
+import DashBoard from "./DashBoard/DashBoard";
 // import PrivateAuth from "./PrivateAuth/PrivateAuth";
 
 const router = createBrowserRouter([
@@ -26,6 +27,7 @@ const router = createBrowserRouter([
       { path: "/login", element: <Login></Login> },
       { path: "/register", element: <Register></Register> },
       { path: "/service", element: <><Services></Services></> },
+      { path: "/dashboard", element: <><DashBoard></DashBoard></> },
     ]
   },
 ]);

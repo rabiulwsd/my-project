@@ -22,16 +22,17 @@ const NavBar = () => {
         {id: 2,  path: "/about", name: "About"},
         {id: 4,  path: "/service", name: "Service"},
         {id: 3,  path: "/contact", name: "Contact"},
+        {id: 3,  path: "/DashBoard", name: "DashBoard"},
     ]
     return (
         <div className='container bg-amber-400 mx-auto relative  flex justify-between items-center px-4 '>
             <div onClick={()=>setClick(!click)} className='text-3xl lg:hidden'>
                 {click ? <AiOutlineClose></AiOutlineClose> : <AiOutlineMenu></AiOutlineMenu> }
             </div>
-            <div className='flex text-3xl font-extrabold justify-center items-center'>
+            <Link to={"/"} className='flex text-3xl font-extrabold justify-center items-center'>
                 <h3 className=''>NIXON</h3>
                 <h3 className='text-xl'><FaDroplet></FaDroplet></h3>
-            </div>
+            </Link >
             <ul className={`flex  flex-col absolute lg:static lg:flex-row gap-4 transition-all duration-700 ${click ? "top-12" : '-top-80'}`}>
             {routes.map(route => <Route key={route.id} link={route}></Route>)}
             </ul>
